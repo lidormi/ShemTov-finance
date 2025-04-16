@@ -374,6 +374,7 @@ footer p a:hover {
 .footer-content .icon {
   font-size: 24px;
 }
+
 /* Media Queries for mobile devices */
 @media (max-width: 768px) {
   /* Adjust the navigation bar */
