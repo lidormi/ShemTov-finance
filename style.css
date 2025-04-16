@@ -389,66 +389,39 @@ footer p a:hover {
   width: 25px;
   height: 3px;
   background-color: #fff;
-}
-@media (max-width: 768px) {
+}@media (max-width: 768px) {
+  /* עיצוב של הסליידר והתמונה */
+  .hero {
+    height: 50vh;
+    background-image: url('images/hero-mobile.jpg'); /* אפשר להשאיר את אותה תמונה אם אין לך ורסיה למובייל */
+    background-size: cover;
+    background-position: center;
+  }
+
+  .hero-text {
+    font-size: 1.4rem;
+    padding: 1rem;
+    line-height: 1.6;
+    max-width: 90%;
+    word-break: break-word;
+  }
+
   /* ניווט */
-  .navbar {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-  }
-
-  .logo {
-    height: 40px;
-  }
-
-  .menu-toggle {
-    display: none !important; /* אין צורך בתפריט המבורגר */
-  }
-
-  .navbar-list {
-    display: flex;
-    flex-direction: row; /* נשאר שורה */
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
-    background-color: transparent;
-    width: auto;
-    padding: 0;
-  }
-
-  .navbar-list li {
-    width: auto;
-    text-align: center;
-  }
-
-  .navbar-list a {
-    padding: 10px;
-    font-size: 16px;
-    width: auto;
-  }
-
-  /* dropdown */
-  .dropdown-content {
-    position: absolute;
-    top: 100%;
-    right: 0;
-    background-color: #2a4971;
-    min-width: 220px;
-    border-radius: 6px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    padding: 10px 0;
-    display: none;
+  nav {
     flex-direction: column;
+    align-items: flex-start;
   }
 
-  .dropdown-content li a {
-    padding: 10px 20px;
-    font-size: 15px;
+  nav ul {
+    flex-direction: column;
+    width: 100%;
+    padding-right: 0;
+    gap: 0.5rem;
   }
 
-  .dropdown:hover .dropdown-content {
-    display: block;
+  nav li {
+    padding: 0.5rem 0;
+    width: 100%;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
   }
 }
