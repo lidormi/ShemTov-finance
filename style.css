@@ -373,27 +373,47 @@ footer p a:hover {
 /* עיצוב לתמונות של האייקונים */
 .footer-content .icon {
   font-size: 24px;
-}
-@media (max-width: 768px) {
-  /* בר ניווט */
+}@media (max-width: 768px) {
+  /* ניווט */
   .navbar {
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     padding: 10px;
+    position: relative;
+  }
+
+  .logo {
+    width: 120px;
+    height: auto;
   }
 
   .hamburger {
     display: block;
     cursor: pointer;
+    z-index: 1001;
+  }
+
+  .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #000;
+    margin: 4px 0;
+    transition: 0.3s;
   }
 
   .navbar-list {
     display: none;
     flex-direction: column;
-    width: 100%;
-    padding: 0;
+    position: absolute;
+    top: 60px;
+    right: 10px;
     background-color: #fff;
-    border-top: 1px solid #ccc;
+    width: 220px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    padding: 10px;
+    z-index: 1000;
   }
 
   .navbar-list.active {
@@ -401,28 +421,14 @@ footer p a:hover {
   }
 
   .navbar-list li {
-    width: 100%;
+    margin: 10px 0;
     text-align: right;
-    padding: 10px 15px;
   }
 
-  .dropdown-content {
-    position: static;
-    display: none;
-    background-color: #f9f9f9;
-    width: 100%;
-  }
-
-  .dropdown:hover .dropdown-content,
-  .dropdown:focus-within .dropdown-content {
-    display: block;
-  }
-
-  /* סליידר */
+  /* כותרת סליידר */
   .slider-text h1 {
     font-size: 18px;
     padding: 10px;
-    text-align: center;
   }
 
   .slider-img {
@@ -430,60 +436,105 @@ footer p a:hover {
     object-fit: cover;
   }
 
-  /* כרטיסים */
+  /* תוכן ראשי */
+  .intro {
+    padding: 20px;
+    text-align: center;
+  }
+
+  .intro h2 {
+    font-size: 20px;
+  }
+
+  .intro p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  /* כרטיסיות */
   .cards-wrapper {
     flex-direction: column;
     align-items: center;
+    gap: 15px;
+    padding: 15px;
   }
 
   .card-container {
     width: 90%;
-    margin-bottom: 20px;
+    max-width: 320px;
+  }
+
+  .card {
+    width: 100%;
+    height: auto;
+  }
+
+  .card-side {
+    padding: 10px;
+  }
+
+  .card-back {
+    font-size: 14px;
+    line-height: 1.5;
+    overflow-wrap: break-word;
   }
 
   /* המלצות */
-  .testimonials-section {
-    padding: 20px;
+  .testimonials-section h2 {
+    font-size: 20px;
   }
 
-  .testimonials-slider .testimonial {
+  .testimonial p {
     font-size: 14px;
-    padding: 10px;
+  }
+
+  .testimonial span {
+    font-size: 13px;
   }
 
   /* טופס צור קשר */
   .contact-form {
-    padding: 10px;
-    flex-direction: column;
-    align-items: stretch;
+    padding: 15px;
   }
 
   .contact-form input,
-  .contact-form textarea,
-  .contact-form button {
+  .contact-form textarea {
     width: 100%;
+    font-size: 14px;
     margin-bottom: 10px;
+  }
+
+  .submit-button {
+    width: 100%;
     font-size: 16px;
   }
 
   /* פוטר */
   .footer-content {
+    padding: 20px;
     text-align: center;
     font-size: 14px;
   }
 
   .social-icons {
+    display: flex;
     flex-direction: column;
-    gap: 10px;
+    align-items: center;
+    gap: 8px;
+    margin-top: 10px;
   }
 
   .social-icons a {
-    display: inline-flex;
+    display: flex;
     align-items: center;
+    justify-content: center;
     gap: 5px;
+    direction: rtl;
+    text-decoration: none;
+    color: inherit;
   }
 
-  .icon {
+  .social-icons img.icon {
     width: 20px;
     height: 20px;
   }
